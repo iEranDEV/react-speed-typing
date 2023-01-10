@@ -11,7 +11,7 @@ function GameOver({stats} : {stats: {inputChars: number, inputWords: number, goo
 
     return (
         <div className="w-screen h-screen fixed top-0 left-0 flex justify-center items-center backdrop-blur-[2px] bg-stone-700/50">
-            <div className="bg-stone-100 w-96 p-4 flex flex-col rounded-xl shadow-xl items-center justify-center gap-4">
+            <div className="bg-stone-100 dark:bg-stone-500 w-96 p-4 flex flex-col rounded-xl shadow-xl items-center justify-center gap-4">
                 <p className="text-stone-700 font-bold tracking-widest text-xl font-mono">GAME OVER</p>
                 <hr className="border-stone-400 border rounded-full w-full" />
                 <div className="flex justify-center items-center gap-8 w-full">

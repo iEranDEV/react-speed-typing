@@ -46,7 +46,7 @@ function Game() {
         <div className="focus:border-none w-full h-full flex flex-col pt-16 items-center gap-16">
             <div className="flex flex-col gap-2 justify-center items-center">
 				<p className="tracking-wider uppercase text-stone-400 font-semibold">Typing speed test</p>
-                <h1 className="text-stone-700 font-bold text-3xl">Test your typing skills</h1>
+                <h1 className="text-stone-700 dark:text-stone-100 font-bold text-3xl">Test your typing skills</h1>
 			</div>
             <div className="w-full flex flex-col-reverse gap-4 md:flex-row md:w-[40rem] justify-between items-center">
                 <Countdown setStatus={setStatus} status={status}></Countdown>
