@@ -1,4 +1,4 @@
-function GameData({ value, name}: {value: string, name: string}) {
+function GameData({ value, name}: {value: any, name: string}) {
 
     return (
         <div className="flex flex-col gap-2 justify-center items-center">

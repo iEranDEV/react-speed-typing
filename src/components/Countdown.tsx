@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 
-function Countdown({ status }: {status: boolean}) {
+function Countdown({ status, setStatus }: {status: string, setStatus: Function}) {
     const [countdown, setCountdown] = useState(60);
 
     useEffect(() => {
-        if(status) {
+        if(status === 'running') {
             const interval = setInterval(() => {
-                setCountdown(countdown - 1);
+                if(countdown === 0) {
+                    setStatus('over');
+                } else {
+                    setCountdown(countdown - 1);
+                }
             }, 1000);
             return () =>  clearInterval(interval);
         }

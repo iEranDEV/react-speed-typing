@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function NavBar() {
     const [darkMode, setDarkMode] = useState(false)
 
+    useEffect(() => {
+        if(localStorage.getItem('darkMode') === 'true') {
+            setDarkMode(true);
+            document.documentElement.classList.toggle('dark');
+        }
+    }, [])
+
     const toggleDarkMode = () => {
         document.documentElement.classList.toggle('dark');
+        localStorage.setItem('darkMode', !darkMode + '')
         setDarkMode(!darkMode);
     }
 
