@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Countdown from "./Countdown";
 import GameData from "./GameData";
 import randomWords from 'random-words';
